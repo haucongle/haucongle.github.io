@@ -2,6 +2,9 @@ body {
   width: 100%; /* For small screens */
   max-width: 1140px; /* For large screens */
   margin: auto; /* Center the container in the viewport */
+  padding: 20px;
+
+  text-align: justify;
 
   font-family: Roboto, Helvetica, sans-serif;
   font-size: calc(10px + 0.35vw); /* Responsive base font size */
@@ -48,4 +51,68 @@ h4,
 h5,
 h6 {
   margin: calc(10px + 1.05vw) 0; /* Responsive margins */
+}
+
+.hovered-scrollbar,
+.hovered-scrollbar--content {
+  width: 100%;
+}
+
+.hovered-scrollbar {
+  visibility: hidden;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.hovered-scrollbar--content,
+.hovered-scrollbar:hover,
+.hovered-scrollbar:focus {
+  visibility: visible;
+
+  transition: visibility 0.2s;
+
+  outline: none;
+}
+
+.hovered-scrollbar::-webkit-scrollbar,
+.scrollbar-thumb--none-radius::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hovered-scrollbar::-webkit-scrollbar-thumb,
+.scrollbar-thumb--none-radius::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+#back2Top {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 50px;
+
+  display: none;
+  overflow: hidden;
+
+  width: 40px;
+
+  cursor: pointer;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  text-align: center;
+  text-decoration: none;
+
+  color: #555;
+  background-color: #ddd;
+
+  font-size: 30px;
+  line-height: 40px;
+}
+
+#back2Top:hover {
+  color: #000;
+  background-color: #ddf;
 }
