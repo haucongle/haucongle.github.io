@@ -10,14 +10,14 @@
     <div class="container">
         <h1>Tính giá thuê nhà hàng tháng</h1>
         <form id="rentCalculator">
-            <label for="unitPrice">Đơn giá (VNĐ/m²):</label>
-            <input type="number" id="unitPrice" required>
+            <label for="unitPrice">Đơn giá (tr/m²):</label>
+            <input type="number" id="unitPrice" step="0.1" required>
 
             <label for="area">Diện tích (m²):</label>
             <input type="number" id="area" required>
 
             <label for="interestRate">Lãi suất ngân hàng (%):</label>
-            <input type="number" id="interestRate" step="0.01" required>
+            <input type="number" id="interestRate" step="0.1" required>
 
             <button type="button" onclick="calculateRent()">Tính giá thuê</button>
         </form>

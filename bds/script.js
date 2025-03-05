@@ -1,6 +1,6 @@
 function calculateRent() {
     // Lấy giá trị từ các trường input
-    const unitPrice = parseFloat(document.getElementById('unitPrice').value);
+    const unitPrice = parseFloat(document.getElementById('unitPrice').value) * 1000000;
     const area = parseFloat(document.getElementById('area').value);
     const interestRate = parseFloat(document.getElementById('interestRate').value) / 100; // Chuyển % thành số thập phân
 
